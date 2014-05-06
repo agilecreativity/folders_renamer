@@ -1,46 +1,72 @@
-## FoldersRenamer
+## folders_renamer
 
-[![Gem Version](https://badge.fury.io/rb/folders_renamer.svg)](http://badge.fury.io/rb/folders_renamer)
-[![Dependency Status](https://gemnasium.com/agilecreativity/folders_renamer.png)](https://gemnasium.com/agilecreativity/folders_renamer)
-[![Code Climate](https://codeclimate.com/github/agilecreativity/folders_renamer.png)](https://codeclimate.com/github/agilecreativity/folders_renamer)
+[![Dependency Status](https://gemnasium.com/agilecreativity/folders_renamer.png)][gemnasium]
+[![Code Climate](https://codeclimate.com/github/agilecreativity/folders_renamer.png)][codeclimate]
+[![Build Status](https://secure.travis-ci.org/agilecreativity/folders_renamer.png)][travis-ci]
+[![Coverage Status](https://secure.travis-ci.org/agilecreativity/folders_renamer.png)][coveralls]
 
-Quickly generate the starting template for creating CLI ruby gem.
-Generated template contain the simplest possible structure so that we don't have
-to start from scratch.
+[gem]: http://badge.fury.io/rb/folders_renamer
+[gemnasium]: https://gemnasium.com/agilecreativity/folders_renamer
+[codeclimate]: https://codeclimate.com/github/agilecreativity/folders_renamer
+[travis-ci]: http://travis-ci.org/agilecreativity/folders_renamer
+[coveralls]: https://coveralls.io/r/agilecreativity/folders_renamer
 
-Features:
+Rename/cleanup folder names using the simple rules. For optimal result you may like
+also like to try my [filename_cleaner][] gem which clean/rename the bad file names.
 
-- Test with [minitest][]
-- Build with the power of [Thor][]
-- Debug with pry[pry][]
-- Documentation with [yard][]
-- Style check with [rubocop][]
-- Initial git manipulation using [grit][]
+Features
+========
+
+- Rename directory recursively from any starting location
+- Replace unwanted characters with value of your choice using `--sep-string` option (default to . (dot))
+- Following the [Semantic Versioning][] for release schedule
+- Quickly rename bad folder names to good folder names with one command.
+
+e.g. turn these directories (if your OS allow you to have these names)
+
+```
+some_folder/
+├── aa!@#$!01
+│   └── bb#@#$@#$@01
+├── aa**#$@#$#@$aa
+    └── bb$@#$#@$@#bb
+        └── cc#$!#$@#cc!!!
+```
+
+into these directories
+
+```
+some_folder/
+├── aa_01
+│   └── bb_01
+├── aa_aa
+    └── bb_bb
+        └── cc_cc
+```
 
 ### Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'folders_renamer'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install folders_renamer
-
-### Usage
-
-Use as library try
-
-```ruby
-require 'folders_renamer'
-include FoldersRenamer
-# then call the appropriate functions
+```sh
+gem install folders_renamer
 ```
 
+### Usage/Synopsis
+
+Type the `folders_rename` without any options to get the help which should be something like:
+
+```
+Usage:
+  folders_renamer rename -b, --base-dir=BASE_DIR -s, --sep-string=SEP_STRING
+
+Options:
+  -b, --base-dir=BASE_DIR      # Starting directory
+                               # Default: . (current directory)
+  -s, --sep-string=SEP_STRING  # Separtor string to use
+                               # Default: .
+  -v, [--version=VERSION]      # Display version number
+
+Cleanup and rename folders
+```
 ### Contributing
 
 1. Fork it
@@ -49,9 +75,5 @@ include FoldersRenamer
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-[thor]: https://github.com/erikhuda/thor
-[minitest]: https://github.com/seattlerb/minitest
-[yard]: https://github.com/lsegal/yard
-[pry]: https://github.com/pry/pry
-[rubocop]: https://github.com/bbatsov/rubocop
-[grit]: https://github.com/mojombo/grit
+[Semantic Versioning]: http://semver.org
+[filename_cleaner]: http://rubygems.org/gems/filename_cleaner
