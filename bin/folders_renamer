@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/folders_renamer'
+include FoldersRenamer
+FoldersRenamer::CLI.start(ARGV)
