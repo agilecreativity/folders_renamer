@@ -1,15 +1,14 @@
 ## folders_renamer
 
+[![Gem Version](https://badge.fury.io/rb/folders_renamer.svg)][gem]
 [![Dependency Status](https://gemnasium.com/agilecreativity/folders_renamer.png)][gemnasium]
 [![Code Climate](https://codeclimate.com/github/agilecreativity/folders_renamer.png)][codeclimate]
-[![Build Status](https://secure.travis-ci.org/agilecreativity/folders_renamer.png)][travis-ci]
-[![Coverage Status](https://secure.travis-ci.org/agilecreativity/folders_renamer.png)][coveralls]
+[![Build Status](https://travis-ci.org/agilecreativity/folders_renamer.svg)][travis-ci]
 
 [gem]: http://badge.fury.io/rb/folders_renamer
 [gemnasium]: https://gemnasium.com/agilecreativity/folders_renamer
 [codeclimate]: https://codeclimate.com/github/agilecreativity/folders_renamer
-[travis-ci]: http://travis-ci.org/agilecreativity/folders_renamer
-[coveralls]: https://coveralls.io/r/agilecreativity/folders_renamer
+[travis-ci]: https://travis-ci.org/agilecreativity/folders_renamer
 
 Rename/cleanup folder names using the simple rules. For optimal result you may like
 also like to try my [filename_cleaner][] gem which clean/rename the bad file names.
