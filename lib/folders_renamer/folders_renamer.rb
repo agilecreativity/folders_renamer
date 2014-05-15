@@ -4,8 +4,10 @@ require "filename_cleaner"
 module FoldersRenamer
   CustomError = Class.new(StandardError)
   class << self
-    def rename(base_dir = Dir.pwd, sep_string = ".")
-      base_dir = File.expand_path(base_dir)
+    def rename(options)
+      base_dir   = File.expand_path(options[:base_dir])
+      sep_string = options[:sep_string]
+      commit     = options[:commit]
 
       unless File.directory?(base_dir) && File.readable?(base_dir)
         fail "#{base_dir} is not a valid directory or not readable!"
@@ -17,9 +19,14 @@ module FoldersRenamer
           unless new_path == path
             puts "FYI: rename from: #{path}"
             puts "FYI: rename to  : #{new_path}"
-            path.rename(new_path)
+            path.rename(new_path) if commit
           end
         end
+      end
+      unless commit
+        puts "---------------------------------------------------------------------"
+        puts "This is the dry run only, use --commit to make your changes permanent"
+        puts "---------------------------------------------------------------------"
       end
     end
 

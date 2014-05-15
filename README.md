@@ -14,14 +14,16 @@ Rename/cleanup folder names using the simple rules. For optimal result you may l
 also like to try my [filename_cleaner][] gem which clean/rename the bad file names.
 
 Features
-========
+--------
 
 - Rename directory recursively from any starting location
 - Replace unwanted characters with value of your choice using `--sep-string` option (default to . (dot))
 - Following the [Semantic Versioning][] for release schedule
 - Quickly rename bad folder names to good folder names with one command.
 
-e.g. turn these directories (if your OS allow you to have these names)
+TL;DR
+-----
+Turn these directories (if your OS allow you to have these names)
 
 ```
 some_folder/
@@ -41,6 +43,18 @@ some_folder/
 ├── aa_aa
     └── bb_bb
         └── cc_cc
+
+```
+using command like:
+
+```sh
+cd ~/path/to/some_folder/
+
+# Perform the dry-run to see what will be changed (no changes)
+folders_renamer rename --sep-string _
+
+# Commit your changes
+folders_renamer rename --sep-string _ --commit
 ```
 
 ### Installation
@@ -58,14 +72,16 @@ Usage:
   folders_renamer rename -b, --base-dir=BASE_DIR -s, --sep-string=SEP_STRING
 
 Options:
-  -b, --base-dir=BASE_DIR      # Starting directory
-                               # Default: . (current directory)
-  -s, --sep-string=SEP_STRING  # Separtor string to use
-                               # Default: .
-  -v, [--version=VERSION]      # Display version number
+  -b, --base-dir=BASE_DIR        # Starting directory
+                                 # Default: . (current directory)
+  -s, --sep-string=SEP_STRING    # Separtor string to use
+                                 # Default: .
+  -c, [--commit], [--no-commit]  # Commit your changes (defalt --no-commit)
+  -v, [--version=VERSION]        # Display version number
 
 Cleanup and rename folders
 ```
+
 ### Contributing
 
 1. Fork it

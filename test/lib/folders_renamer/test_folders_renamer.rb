@@ -11,7 +11,7 @@ describe FoldersRenamer do
   context "#rename" do
     it "works with default separator string" do
       FileUtils.cd @base_dir
-      FoldersRenamer.rename(@base_dir, ".")
+      FoldersRenamer.rename(base_dir: @base_dir, sep_string: ".", commit: true)
       filesystem do
         dir "base" do
           dir "aa.01" do
@@ -22,7 +22,7 @@ describe FoldersRenamer do
     end
     it "works with non-default separator string" do
       FileUtils.cd @base_dir
-      FoldersRenamer.rename(@base_dir, "_")
+      FoldersRenamer.rename(base_dir: @base_dir, sep_string: "_", commit: true)
       filesystem do
         dir "base" do
           dir "aa_01" do
