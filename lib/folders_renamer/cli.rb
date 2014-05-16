@@ -14,8 +14,8 @@ module FoldersRenamer
                   required: true
     method_option :commit,
                   type: :boolean,
-                  aliases: '-c',
-                  desc: 'Commit your changes',
+                  aliases: "-c",
+                  desc: "Commit your changes",
                   default: false
     method_option "version",
                   aliases: "-v",
@@ -34,7 +34,7 @@ module FoldersRenamer
     def usage
       puts <<-EOS
 Usage:
-  folders_renamer rename -b, --base-dir=BASE_DIR -s, --sep-string=SEP_STRING
+  folders_renamer -b, --base-dir=BASE_DIR -s, --sep-string=SEP_STRING
 
 Options:
   -b, --base-dir=BASE_DIR        # Starting directory

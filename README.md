@@ -51,10 +51,10 @@ using command like:
 cd ~/path/to/some_folder/
 
 # Perform the dry-run to see what will be changed (no changes)
-folders_renamer rename --sep-string _
+folders_renamer --sep-string _
 
 # Commit your changes
-folders_renamer rename --sep-string _ --commit
+folders_renamer --sep-string _ --commit
 ```
 
 ### Installation
@@ -69,7 +69,7 @@ Type the `folders_rename` without any options to get the help which should be so
 
 ```
 Usage:
-  folders_renamer rename -b, --base-dir=BASE_DIR -s, --sep-string=SEP_STRING
+  folders_renamer -b, --base-dir=BASE_DIR -s, --sep-string=SEP_STRING
 
 Options:
   -b, --base-dir=BASE_DIR        # Starting directory

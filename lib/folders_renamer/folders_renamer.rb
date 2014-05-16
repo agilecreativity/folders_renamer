@@ -16,10 +16,12 @@ module FoldersRenamer
       find_depth_first(Pathname(base_dir)) do |path|
         if path.directory?
           new_path = path.dirname + Pathname(FilenameCleaner.sanitize(path.basename.to_s, sep_string))
-          unless new_path == path
+          if new_path != path && !File.exist?(new_path)
             puts "FYI: rename from: #{path}"
             puts "FYI: rename to  : #{new_path}"
             path.rename(new_path) if commit
+          else
+            puts "FYI: skip folder: #{path}"
           end
         end
       end
