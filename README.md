@@ -21,7 +21,7 @@ Features
 - Following the [Semantic Versioning][] for release schedule
 - Quickly rename bad folder names to good folder names with one command.
 
-TL;DR
+TL;DR;
 -----
 Turn these directories (if your OS allow you to have these names)
 
@@ -65,7 +65,7 @@ gem install folders_renamer
 
 ### Usage/Synopsis
 
-Type the `folders_rename` without any options to get the help which should be something like:
+Type the `folders_renamer` without any options, which will give the following output
 
 ```
 Usage:

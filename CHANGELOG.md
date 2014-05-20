@@ -1,5 +1,10 @@
 ## Changelogs
 
+### 0.1.4
+
+* Move the core_ext code to `agile_utils`
+* Update gemspec file
+
 ### 0.1.3
 
 * Simplify the CLI usage
