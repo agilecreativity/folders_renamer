@@ -1,5 +1,11 @@
 ## Changelogs
 
+### 0.2.0
+
+* Update to the latest version of dependent gems
+* Support only 2.0.x+ to avoid the monkeypatching core classes
+* Misc cleanup
+
 ### 0.1.4
 
 * Move the core_ext code to `agile_utils`
