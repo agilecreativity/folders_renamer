@@ -1,9 +1,13 @@
 ## Changelogs
 
+### 0.2.1
+
+* Only support version 2.1.0+ that fully support refinement
+
 ### 0.2.0
 
 * Update to the latest version of dependent gems
-* Support only 2.0.x+ to avoid the monkeypatching core classes
+* Support only 2.1.x+ to avoid the monkeypatching core classes
 * Misc cleanup
 
 ### 0.1.4
