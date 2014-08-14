@@ -32,7 +32,7 @@ module FoldersRenamer
       end
     end
 
-  private
+    private
 
     def find_depth_first(pathname)
       acc = []

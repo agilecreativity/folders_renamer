@@ -2,8 +2,6 @@ require "thor"
 require "agile_utils"
 module FoldersRenamer
   class CLI < Thor
-    using AgileUtils::HashExt
-
     desc "rename", "Cleanup and rename folders"
     method_option "base_dir",
                   aliases: "-b",

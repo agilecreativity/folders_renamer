@@ -1,5 +1,10 @@
 ## Changelogs
 
+### 0.2.2
+
+* Support ruby version start from 1.9.3+
+* Misc code cleanup
+
 ### 0.2.1
 
 * Only support version 2.1.0+ that fully support refinement
