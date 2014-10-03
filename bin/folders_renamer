@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative "../lib/folders_renamer"
-include FoldersRenamer
 if ARGV.empty?
   FoldersRenamer::CLI.start(%w[usage])
 else

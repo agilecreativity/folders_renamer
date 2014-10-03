@@ -1,6 +1,4 @@
 require_relative "../../test_helper"
-require "minitest/filesystem"
-require "tmpdir"
 describe FoldersRenamer do
   before :each do
     @tmp_dir = Dir.mktmpdir(%w[foo bar])

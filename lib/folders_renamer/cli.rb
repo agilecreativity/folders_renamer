@@ -1,5 +1,3 @@
-require "thor"
-require "agile_utils"
 module FoldersRenamer
   class CLI < Thor
     desc "rename", "Cleanup and rename folders"

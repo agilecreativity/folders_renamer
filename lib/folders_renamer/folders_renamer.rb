@@ -1,6 +1,3 @@
-require "fileutils"
-require "pathname"
-require "filename_cleaner"
 module FoldersRenamer
   CustomError = Class.new(StandardError)
   class << self

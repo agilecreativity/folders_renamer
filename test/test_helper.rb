@@ -4,5 +4,7 @@ require "minitest/pride"
 require "minitest-spec-context"
 require "pry"
 require "awesome_print"
+require "minitest/filesystem"
+require "tmpdir"
 require_relative "../lib/folders_renamer"
 include FoldersRenamer

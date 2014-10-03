@@ -1,4 +1,9 @@
-require_relative "folders_renamer/version"
-require_relative "folders_renamer/folders_renamer"
-require_relative "folders_renamer/cli"
+require "thor"
+require "agile_utils"
+require "fileutils"
+require "pathname"
+require "filename_cleaner"
+require "folders_renamer/version"
+require "folders_renamer/folders_renamer"
+require "folders_renamer/cli"
 include FoldersRenamer
