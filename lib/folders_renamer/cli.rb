@@ -20,7 +20,7 @@ module FoldersRenamer
                   aliases: "-v",
                   desc: "Display version number"
     def rename
-      opts = options.symbolize_keys
+      opts = options.deep_symbolize_keys
       if opts[:version]
         puts "You are using FoldersRenamer version #{FoldersRenamer::VERSION}"
         exit
