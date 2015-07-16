@@ -1,5 +1,10 @@
 ## Changelogs
 
+### 0.2.4
+
+- Update gem's dependencies
+- Use optimistic versioning in gemspec file
+
 ### 0.2.3
 
 * Use `require` instead of `require_relative` when possible
